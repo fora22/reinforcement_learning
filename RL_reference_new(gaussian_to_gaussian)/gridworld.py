@@ -4,7 +4,6 @@ import itertools
 import scipy.misc
 import matplotlib.pyplot as plt
 
-
 class gameOb():
     def __init__(self,coordinates,size,intensity,channel,reward,name):
         self.x = coordinates[0]
@@ -36,7 +35,7 @@ class gameEnv():
         for i in range(self.gaussian_location()+1):
             bug.append(gameOb(self.newPosition(),1,1,1,1,'goal'))
             self.objects.append(bug[i])
-        random_number_2 = random.randrange(1, self.gaussian_location()+2)
+        #random_number_2 = random.randrange(1, self.gaussian_location()+2)
         for i in range(self.gaussian_location()+1):
             hole.append(gameOb(self.newPosition(),1,1,0,-1,'fire'))
             self.objects.append(hole[i])
